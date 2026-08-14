@@ -150,7 +150,7 @@ Uma API poderá ser utilizada para obter informações atualizadas sobre filmes,
 A estrutura inicial do projeto será organizada da seguinte maneira:
 
 ```text
-CineScope/
+TELETUBE/
 │
 ├── README.md
 │
