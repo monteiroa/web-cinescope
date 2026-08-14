@@ -1,4 +1,5 @@
-# 🎬 CineScope
+# 🎬 TELETUBE
+
 
 > Plataforma web para consulta, análise e recomendação de filmes.
 
