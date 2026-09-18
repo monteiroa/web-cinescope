@@ -1,3 +1,18 @@
+link para interagir:
+
+https://reel-radar-box.lovable.app
+
+
+
+
+
+
+
+
+
+
+
+
 # 🎬 TELETUBE
 
 
