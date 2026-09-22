@@ -1,0 +1,883 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+/* Remove configurações padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+body {
+    background: #080a0b;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   FUNDO
+   ===================================================== */
+
+.fundo {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 88% 30%,
+            rgba(150, 20, 20, 0.55),
+            transparent 13%
+        ),
+
+        radial-gradient(
+            ellipse at 15% 90%,
+            rgba(100, 15, 15, 0.7),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            180deg,
+            #090b0c 0%,
+            #080a0b 55%,
+            #130808 100%
+        );
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+
+.container {
+    width: 540px;
+
+    margin: 0 auto;
+
+    padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+header {
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+.logo {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e53935;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+nav {
+    display: flex;
+
+    gap: 26px;
+}
+
+nav a {
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    font-size: 10px;
+}
+
+nav a:hover {
+    color: #e53935;
+}
+
+
+/* =====================================================
+   BARRA DE PESQUISA
+   ===================================================== */
+
+.pesquisa {
+    height: 26px;
+
+    width: 100%;
+
+    margin-top: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 9px;
+
+    background: #17191a;
+
+    border: 1px solid #292c2e;
+
+    border-radius: 9px;
+}
+
+
+/* Ícone da pesquisa */
+.icone {
+    color: #8d9499;
+
+    font-size: 16px;
+
+    margin-right: 6px;
+}
+
+
+/* Campo de texto */
+.pesquisa input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 9px;
+}
+
+
+/* Placeholder */
+.pesquisa input::placeholder {
+    color: #777d80;
+}
+
+
+/* =====================================================
+   TÍTULO DO CATÁLOGO
+   ===================================================== */
+
+.titulo-catalogo {
+    margin-top: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* Área do título */
+.titulo-catalogo > div:first-child {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Título "Catálogo" */
+.titulo-catalogo h1 {
+    font-size: 23px;
+}
+
+
+/* Quantidade de filmes */
+.titulo-catalogo span {
+    color: #e53935;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   FILTROS
+   ===================================================== */
+
+.filtros {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+/* Botões dos filtros */
+.filtros button {
+    min-width: 76px;
+
+    height: 27px;
+
+    padding: 0 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 7px;
+
+    background: #111415;
+
+    color: #d6d6d6;
+
+    border: 1px solid #292d2e;
+
+    border-radius: 14px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* Seta dos filtros */
+.filtros button span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* Efeito ao passar o mouse */
+.filtros button:hover {
+    border-color: #e53935;
+}
+
+
+/* =====================================================
+   CATÁLOGO
+   ===================================================== */
+
+.catalogo {
+    margin-top: 13px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 33px;
+
+    row-gap: 12px;
+}
+
+
+/* =====================================================
+   FILME
+   ===================================================== */
+
+.filme {
+    width: 157px;
+}
+
+
+/* =====================================================
+   POSTER
+   ===================================================== */
+
+.poster {
+    width: 157px;
+
+    height: 167px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #2c3031;
+
+    border-radius: 5px;
+
+    background: #101213;
+}
+
+
+/* =====================================================
+   BOTÃO FAVORITO
+   ===================================================== */
+
+.favorito {
+    position: absolute;
+
+    top: 7px;
+
+    right: 7px;
+
+    z-index: 5;
+
+    color: #ef5757;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   POSTER 1 - HORIZONTES
+   ===================================================== */
+
+.poster1 {
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #b52b2b 0%,
+            #681616 25%,
+            transparent 42%
+        ),
+
+        linear-gradient(
+            145deg,
+            #190b0b,
+            #591515 45%,
+            #090b0c 75%
+        );
+}
+
+
+/* Lua do primeiro poster */
+.poster1 .lua {
+    position: absolute;
+
+    width: 190px;
+
+    height: 190px;
+
+    border-radius: 50%;
+
+    left: -65px;
+
+    top: 12px;
+
+    background:
+        radial-gradient(
+            circle at 60% 45%,
+            #a92525,
+            #571414 65%,
+            #250909
+        );
+}
+
+
+/* Montanha */
+.poster1 .montanha {
+    position: absolute;
+
+    bottom: -25px;
+
+    left: -20px;
+
+    width: 210px;
+
+    height: 80px;
+
+    background: #090a0a;
+
+    clip-path: polygon(
+        0 100%,
+        25% 35%,
+        42% 70%,
+        60% 20%,
+        72% 60%,
+        100% 15%,
+        100% 100%
+    );
+}
+
+
+/* Pequena pessoa */
+.poster1 .personagem {
+    position: absolute;
+
+    bottom: 42px;
+
+    left: 76px;
+
+    width: 5px;
+
+    height: 16px;
+
+    background: #080808;
+}
+
+
+/* =====================================================
+   POSTER 2 - A ÚLTIMA PORTA
+   ===================================================== */
+
+.poster2 {
+    background:
+        linear-gradient(
+            90deg,
+            #090909,
+            #211011,
+            #090909
+        );
+}
+
+
+/* Porta */
+.poster2 .porta {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 47px;
+
+    width: 65px;
+
+    height: 145px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #100909,
+            #331010,
+            #100909
+        );
+
+    border-left: 2px solid #481313;
+
+    border-right: 2px solid #481313;
+}
+
+
+/* Luz vermelha */
+.poster2 .luz {
+    position: absolute;
+
+    bottom: 8px;
+
+    left: 77px;
+
+    width: 6px;
+
+    height: 120px;
+
+    background: #ef2d2d;
+
+    box-shadow:
+        0 0 12px #e51d1d,
+        0 0 25px rgba(229, 29, 29, 0.6);
+}
+
+
+/* =====================================================
+   POSTER 3 - DIAS EM SILÊNCIO
+   ===================================================== */
+
+.poster3 {
+    background:
+        linear-gradient(
+            180deg,
+            #160c0c,
+            #351111 55%,
+            #080b0b
+        );
+}
+
+
+/* Sol */
+.poster3 .sol {
+    position: absolute;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    top: 43px;
+
+    left: 52px;
+
+    background: #e93636;
+
+    box-shadow: 0 0 15px rgba(239, 46, 46, 0.4);
+}
+
+
+/* Montanhas */
+.poster3 .montanhas {
+    position: absolute;
+
+    bottom: 35px;
+
+    left: -10px;
+
+    width: 180px;
+
+    height: 60px;
+
+    background: #0b1010;
+
+    clip-path: polygon(
+        0 100%,
+        25% 45%,
+        40% 70%,
+        60% 30%,
+        75% 65%,
+        100% 35%,
+        100% 100%
+    );
+}
+
+
+/* Água */
+.poster3 .agua {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 42px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #121515 0px,
+            #121515 3px,
+            #451313 4px,
+            #121515 7px
+        );
+}
+
+
+/* =====================================================
+   POSTER 4 - CIDADE DE NÉON
+   ===================================================== */
+
+.poster4 {
+    background:
+        linear-gradient(
+            90deg,
+            #0c1112,
+            #341010,
+            #080b0c
+        );
+}
+
+
+/* Prédios */
+.poster4 .predios {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 10px;
+
+    width: 137px;
+
+    height: 125px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #090b0c 0 20px,
+            #311010 20px 45px,
+            #0b1011 45px 68px,
+            #491313 68px 95px,
+            #0b0f10 95px 115px,
+            #321010 115px
+        );
+}
+
+
+/* Reflexo */
+.poster4 .reflexo {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 45px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 20px,
+            rgba(220, 30, 30, 0.35) 21px 25px,
+            transparent 26px 45px
+        );
+}
+
+
+/* =====================================================
+   POSTER 5 - O QUE FICA
+   ===================================================== */
+
+.poster5 {
+    background:
+        linear-gradient(
+            180deg,
+            #351313,
+            #100d0e 65%,
+            #060808
+        );
+}
+
+
+/* Lua cheia */
+.poster5 .lua-cheia {
+    position: absolute;
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    top: 30px;
+
+    left: 49px;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #ed3c3c,
+            #741818
+        );
+}
+
+
+/* Árvore */
+.poster5 .arvore {
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 70px;
+
+    width: 10px;
+
+    height: 100px;
+
+    background: #090909;
+
+    box-shadow:
+        -25px -30px 0 -3px #090909,
+        25px -40px 0 -4px #090909;
+}
+
+
+/* =====================================================
+   POSTER 6 - ALÉM DA TERRA
+   ===================================================== */
+
+.poster6 {
+    background:
+        linear-gradient(
+            145deg,
+            #120b0b,
+            #741818 45%,
+            #090c0d 75%
+        );
+}
+
+
+/* Planeta */
+.poster6 .planeta {
+    position: absolute;
+
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    top: 20px;
+
+    left: -38px;
+
+    background:
+        radial-gradient(
+            circle at 60% 40%,
+            #a52828,
+            #5d1515 60%,
+            #210909
+        );
+}
+
+
+/* Montanha */
+.poster6 .montanha-final {
+    position: absolute;
+
+    bottom: -20px;
+
+    left: 0;
+
+    width: 180px;
+
+    height: 80px;
+
+    background: #070909;
+
+    clip-path: polygon(
+        0 100%,
+        18% 60%,
+        35% 30%,
+        48% 70%,
+        68% 15%,
+        82% 60%,
+        100% 30%,
+        100% 100%
+    );
+}
+
+
+/* =====================================================
+   INFORMAÇÕES DOS FILMES
+   ===================================================== */
+
+.filme h2 {
+    margin-top: 7px;
+
+    font-size: 13px;
+
+    color: #f1f1f1;
+}
+
+
+/* Ano e gênero */
+.informacoes {
+    margin-top: 2px;
+
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   AVALIAÇÃO
+   ===================================================== */
+
+.avaliacao {
+    margin-top: 4px;
+
+    color: #bdbdbd;
+
+    font-size: 10px;
+}
+
+
+/* Estrela */
+.avaliacao span {
+    color: #ef4b4b;
+
+    font-size: 14px;
+
+    margin-right: 3px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+
+        justify-items: center;
+
+        gap: 20px;
+    }
+
+    .titulo-catalogo {
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .titulo-catalogo {
+        flex-direction: column;
+    }
+
+    .filtros {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 15px;
+    }
+
+    .filme,
+    .poster {
+        width: 100%;
+    }
+
+    .poster {
+        height: 180px;
+    }
+}
