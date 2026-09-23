@@ -1,20 +1,4 @@
-link para interagir:
-
-https://reel-radar-box.lovable.app
-
-
-
-
-
-
-
-
-
-
-
-
-# 🎬 TELETUBE
-
+#CINESCOPE
 
 > Plataforma web para consulta, análise e recomendação de filmes.
 
