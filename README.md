@@ -8,9 +8,9 @@ O **CineScope** é um projeto acadêmico desenvolvido com o objetivo de criar um
 
 A proposta é desenvolver uma aplicação inspirada em plataformas de informações sobre filmes, permitindo que o usuário consulte dados como título, sinopse, gênero, ano de lançamento, avaliação, elenco, diretor e outras informações relevantes.
 
-Além da consulta, o projeto busca oferecer recursos interativos que auxiliem o usuário na escolha do que assistir, como avaliações, favoritos, filtros e recomendações.
+Além da consulta, o projeto busca oferecer recursos interativos que auxiliem o usuário na escolha do que assistir, como avaliações e filtros.
 
-O projeto será desenvolvido utilizando **HTML, CSS e JavaScript**, com possibilidade de integração a uma **API de filmes** para obtenção dinâmica das informações.
+O projeto será desenvolvido utilizando **HTML e CSS**.
 
 ---
 
@@ -25,10 +25,7 @@ O principal objetivo do CineScope é desenvolver uma plataforma simples, intuiti
 - Exibir informações detalhadas sobre cada filme;
 - Organizar filmes por diferentes categorias;
 - Permitir avaliações dos usuários;
-- Possibilitar a criação de uma lista de filmes favoritos;
 - Implementar filtros de pesquisa;
-- Utilizar JavaScript para adicionar interatividade;
-- Integrar uma API para obter informações sobre filmes;
 - Aplicar conhecimentos de desenvolvimento web adquiridos durante o curso.
 
 ---
@@ -41,7 +38,7 @@ O CineScope é destinado principalmente a:
 - Usuários que procuram algo para assistir;
 - Pessoas que desejam conhecer informações sobre um filme antes de assisti-lo;
 - Usuários interessados em descobrir novos filmes;
-- Pessoas que gostam de avaliar e organizar filmes.
+- Pessoas que gostam de avaliar filmes.
 
 ---
 
@@ -89,14 +86,6 @@ Ao selecionar um filme, o usuário poderá visualizar informações mais complet
 
 O usuário poderá avaliar os filmes utilizando um sistema de notas.
 
-### ❤️ Favoritos
-
-Será possível adicionar filmes a uma lista de favoritos para facilitar o acesso posteriormente.
-
-### 🎯 Recomendações
-
-O sistema poderá apresentar sugestões de filmes com base em categorias, gêneros ou avaliações.
-
 ### 🔽 Filtros
 
 O usuário poderá filtrar os filmes de acordo com critérios como:
@@ -126,22 +115,6 @@ Utilizado para desenvolver a aparência da plataforma, incluindo:
 - Responsividade;
 - Animações e efeitos visuais.
 
-### JavaScript
-
-Responsável pela parte dinâmica e interativa da aplicação, incluindo:
-
-- Pesquisa;
-- Filtros;
-- Avaliações;
-- Favoritos;
-- Manipulação do DOM;
-- Eventos;
-- Consumo da API.
-
-### API de filmes
-
-Uma API poderá ser utilizada para obter informações atualizadas sobre filmes, evitando a necessidade de cadastrar manualmente todos os dados.
-
 ---
 
 ## 📁 Estrutura do projeto
@@ -160,8 +133,4 @@ TELETUBE/
     ├── css/
     │   └── style.css
     │
-    ├── js/
-    │   └── script.js
-    │
     └── img/
-        └── ...
