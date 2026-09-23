@@ -207,6 +207,9 @@ main {
 
     color: white;
 }
+a {
+    text-decoration: none;
+}
 
 
 .sugestoes {
