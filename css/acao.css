@@ -1,0 +1,196 @@
+/* ============================
+   PÁGINA: AÇÃO
+   ============================ */
+
+/* Cor de destaque exclusiva deste gênero */
+:root {
+    --acento: #e53935;
+    --acento-glow: #7c1717;
+    --acento-fade: #260909;
+}
+
+
+.pagina-genero {
+    min-height: calc(100vh - 56px);
+
+    padding: 40px 42px 60px;
+
+    background:
+        radial-gradient(
+            circle at 20% 0%,
+            var(--acento-glow) 0%,
+            var(--acento-fade) 15%,
+            #080808 35%
+        );
+}
+
+
+/* Cabeçalho do gênero */
+.titulo-genero {
+    margin-bottom: 35px;
+}
+
+.titulo-genero .tag {
+    display: inline-block;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--acento);
+
+    border: 1px solid var(--acento);
+
+    border-radius: 20px;
+
+    padding: 4px 12px;
+
+    margin-bottom: 12px;
+}
+
+.titulo-genero h1 {
+    font-size: 40px;
+
+    margin-bottom: 6px;
+}
+
+.titulo-genero p {
+    color: #bdbdbd;
+
+    font-size: 15px;
+}
+
+
+/* Grade de filmes */
+.filmes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* Card do filme */
+.filme-card {
+    background: #0d0d0d;
+
+    border: 1px solid #292929;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform .2s, border-color .2s;
+}
+
+.filme-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--acento);
+}
+
+.filme-capa {
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #1a1a1a;
+}
+
+.filme-info {
+    padding: 16px 18px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.filme-topo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+
+    color: #aaa;
+}
+
+.filme-nota {
+    color: #f5c518;
+
+    font-weight: bold;
+}
+
+.filme-ano {
+    color: #888;
+}
+
+.filme-nome {
+    font-size: 19px;
+
+    color: #fff;
+}
+
+.filme-generos {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.filme-generos span {
+    font-size: 11px;
+
+    padding: 3px 10px;
+
+    border: 1px solid #454545;
+
+    border-radius: 14px;
+
+    color: #ccc;
+}
+
+.filme-sinopse {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #bdbdbd;
+}
+
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .filmes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .pagina-genero {
+        padding: 30px 20px 50px;
+    }
+
+    .titulo-genero h1 {
+        font-size: 30px;
+    }
+
+    .filmes-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+}
