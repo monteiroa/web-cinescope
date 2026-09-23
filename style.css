@@ -175,6 +175,19 @@ main {
     flex-wrap: wrap;
 }
 
+.generos a {
+    padding: 9px 17px;
+
+    border: 1px solid #454545;
+
+    border-radius: 22px;
+
+    background: transparent;
+
+    color: #ccc;
+
+    cursor: pointer;
+}
 .generos button {
     padding: 9px 17px;
 
