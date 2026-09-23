@@ -82,10 +82,6 @@ Ao selecionar um filme, o usuário poderá visualizar informações mais complet
 - Avaliação;
 - Trailer, quando disponível.
 
-### ⭐ Avaliações
-
-O usuário poderá avaliar os filmes utilizando um sistema de notas.
-
 ### 🔽 Filtros
 
 O usuário poderá filtrar os filmes de acordo com critérios como:
