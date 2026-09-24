@@ -23,7 +23,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 400 15px/1.5 "DM Sans", sans-serif;
+  font: 400 15px/1.5 sans-serif;
 }
 
 body::before {
@@ -51,7 +51,10 @@ input {
   font: inherit;
 }
 
-/* Cabeçalho */
+/* ============================
+   CABEÇALHO
+   ============================ */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -67,7 +70,7 @@ input {
 }
 
 .brand {
-  font: 700 22px "Space Grotesk", sans-serif;
+  font: 700 22px sans-serif;
   letter-spacing: -0.7px;
 }
 
@@ -106,12 +109,18 @@ input {
   background: var(--red);
 }
 
-/* Estrutura da página */
+/* ============================
+   ESTRUTURA DA PÁGINA
+   ============================ */
+
 main {
   padding-bottom: 90px;
 }
 
-/* Apresentação */
+/* ============================
+   APRESENTAÇÃO
+   ============================ */
+
 .hero {
   position: relative;
   display: flex;
@@ -129,13 +138,13 @@ main {
 .eyebrow {
   margin: 0 0 10px;
   color: var(--red);
-  font: 600 11px "Space Grotesk", sans-serif;
+  font: 600 11px sans-serif;
   letter-spacing: 1.8px;
 }
 
 .hero h1 {
   margin: 0;
-  font: 700 clamp(50px, 7vw, 92px) / 0.95 "Space Grotesk", sans-serif;
+  font: 700 clamp(50px, 7vw, 92px) / 0.95 sans-serif;
   letter-spacing: -4px;
 }
 
@@ -151,7 +160,10 @@ main {
   font-size: 17px;
 }
 
-/* Elemento decorativo */
+/* ============================
+   ELEMENTO DECORATIVO
+   ============================ */
+
 .hero-orbit {
   position: absolute;
   top: -215px;
@@ -178,7 +190,10 @@ main {
   box-shadow: 0 0 100px rgba(227, 59, 63, 0.35);
 }
 
-/* Painel de filtros */
+/* ============================
+   PAINEL DE FILTROS
+   ============================ */
+
 .search-panel {
   margin: 0 clamp(24px, 7vw, 112px);
   padding: 30px;
@@ -196,7 +211,7 @@ main {
 
 .panel-title h2 {
   margin: 0;
-  font: 600 28px "Space Grotesk", sans-serif;
+  font: 600 28px sans-serif;
   letter-spacing: -1px;
 }
 
@@ -204,10 +219,13 @@ main {
   padding: 7px 9px;
   border: 1px solid rgba(227, 59, 63, 0.5);
   color: var(--red);
-  font: 600 12px "Space Grotesk", sans-serif;
+  font: 600 12px sans-serif;
 }
 
-/* Campo de busca */
+/* ============================
+   CAMPO DE BUSCA
+   ============================ */
+
 .search-row {
   display: flex;
   gap: 12px;
@@ -240,7 +258,10 @@ main {
   color: var(--dim);
 }
 
-/* Botões */
+/* ============================
+   BOTÕES
+   ============================ */
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -251,7 +272,9 @@ main {
   border-radius: 3px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.16s var(--ease), background 0.18s;
+  transition:
+    transform 0.16s var(--ease),
+    background 0.18s;
 }
 
 .button:active {
@@ -267,7 +290,10 @@ main {
   background: #f04b4f;
 }
 
-/* Grade de filtros */
+/* ============================
+   GRADE DE FILTROS
+   ============================ */
+
 .filter-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr;
@@ -293,7 +319,10 @@ main {
   text-transform: uppercase;
 }
 
-/* Filtro por gênero */
+/* ============================
+   FILTRO POR GÊNERO
+   ============================ */
+
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -323,7 +352,10 @@ main {
   color: #fff;
 }
 
-/* Filtro por ano */
+/* ============================
+   FILTRO POR ANO
+   ============================ */
+
 .decades {
   display: flex;
   flex-wrap: wrap;
@@ -417,7 +449,10 @@ main {
   color: var(--muted);
 }
 
-/* Filtro por avaliação */
+/* ============================
+   FILTRO POR AVALIAÇÃO
+   ============================ */
+
 .rating-options {
   display: flex;
   flex-wrap: wrap;
@@ -432,7 +467,10 @@ main {
   color: var(--red);
 }
 
-/* Filtro de trailers */
+/* ============================
+   FILTRO DE TRAILERS
+   ============================ */
+
 .toggle-line {
   display: flex;
   align-items: center;
@@ -467,7 +505,10 @@ main {
   background: #fff;
 }
 
-/* Ações do painel */
+/* ============================
+   AÇÕES DO PAINEL
+   ============================ */
+
 .filter-footer {
   display: flex;
   align-items: center;
@@ -491,7 +532,10 @@ main {
   font-size: 12px;
 }
 
-/* Resultados */
+/* ============================
+   RESULTADOS
+   ============================ */
+
 .results {
   display: flex;
   align-items: flex-end;
@@ -504,7 +548,7 @@ main {
 
 .results h2 {
   margin: 0;
-  font: 600 28px "Space Grotesk", sans-serif;
+  font: 600 28px sans-serif;
   letter-spacing: -1px;
 }
 
@@ -517,7 +561,10 @@ main {
   font-size: 12px;
 }
 
-/* Rodapé */
+/* ============================
+   RODAPÉ
+   ============================ */
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -529,10 +576,13 @@ main {
 
 .site-footer span:first-child {
   color: var(--text);
-  font: 600 15px "Space Grotesk", sans-serif;
+  font: 600 15px sans-serif;
 }
 
-/* Responsividade para tablets */
+/* ============================
+   RESPONSIVIDADE - TABLETS
+   ============================ */
+
 @media (max-width: 950px) {
   .filter-grid {
     grid-template-columns: 1fr 1fr;
@@ -543,7 +593,10 @@ main {
   }
 }
 
-/* Responsividade para celulares */
+/* ============================
+   RESPONSIVIDADE - CELULARES
+   ============================ */
+
 @media (max-width: 600px) {
   .site-header {
     height: 64px;

@@ -3,53 +3,511 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CineScope — busca e filtros de filmes." />
+
+  <meta
+    name="description"
+    content="CineScope — busca e filtros de filmes."
+  />
+
   <title>CineScope — Busca e filtros</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/filtro.css"/>
+
+  <!-- CSS da página -->
+  <link rel="stylesheet" href="../css/filtro.css" />
 </head>
+
 <body>
+
+  <!-- ============================
+       CABEÇALHO
+       ============================ -->
+
   <header class="site-header">
-    <a class="brand" href="#filtros"><span>Cine</span><strong>Scope</strong></a>
+
+    <a class="brand" href="#filtros">
+      <span>Cine</span><strong>Scope</strong>
+    </a>
+
     <nav class="main-nav" aria-label="Navegação principal">
-      <a href="../index.html">Ínicio</a>
-      <a href="../pages/catalago.html" >Catálogo</a>
-      <!-- <a href="#resultados">Favoritos</a> -->
-      <a href="filtro.html">Filtros</a>
+      <a href="../index.html">Início</a>
+      <a href="../pages/catalago.html">Catálogo</a>
+      <a href="filtro.html" class="active">Filtros</a>
     </nav>
+
   </header>
 
+
   <main>
+
+    <!-- ============================
+         APRESENTAÇÃO
+         ============================ -->
+
     <section class="hero" id="filtros">
+
       <div class="hero-copy">
-        <p class="eyebrow">CINESCOPE / BUSCA AVANÇADA</p>
-        <h1>Encontre seu<br /><em>próximo filme.</em></h1>
-        <p class="hero-text">Pesquise por nome, gênero ou ano e refine os resultados do catálogo.</p>
+
+        <p class="eyebrow">
+          CINESCOPE / BUSCA AVANÇADA
+        </p>
+
+        <h1>
+          Encontre seu<br />
+          <em>próximo filme.</em>
+        </h1>
+
+        <p class="hero-text">
+          Pesquise por nome, gênero ou ano e refine os resultados do catálogo.
+        </p>
+
       </div>
-      <div class="hero-orbit" aria-hidden="true"></div>
+
+      <div
+        class="hero-orbit"
+        aria-hidden="true">
+      </div>
+
     </section>
 
-    <section class="search-panel" aria-labelledby="titulo-filtros">
-      <div class="panel-title"><div><p class="eyebrow">FERRAMENTAS DE BUSCA</p><h2 id="titulo-filtros">Busca e filtros</h2></div><span class="panel-index">02</span></div>
-      <form action="#resultados" class="search-row">
-        <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" name="busca" placeholder="Buscar por nome, gênero ou ano..." /></label>
-        <button class="button button-red" type="submit">Buscar</button>
+
+    <!-- ============================
+         PAINEL DE BUSCA
+         ============================ -->
+
+    <section
+      class="search-panel"
+      aria-labelledby="titulo-filtros"
+    >
+
+      <div class="panel-title">
+
+        <div>
+
+          <p class="eyebrow">
+            FERRAMENTAS DE BUSCA
+          </p>
+
+          <h2 id="titulo-filtros">
+            Busca e filtros
+          </h2>
+
+        </div>
+
+        <span class="panel-index">
+          02
+        </span>
+
+      </div>
+
+
+      <!-- ============================
+           BUSCA
+           ============================ -->
+
+      <form
+        action="#resultados"
+        class="search-row"
+      >
+
+        <label class="search-box">
+
+          <span aria-hidden="true">
+            ⌕
+          </span>
+
+          <input
+            type="search"
+            name="busca"
+            placeholder="Buscar por nome, gênero ou ano..."
+          />
+
+        </label>
+
+        <button
+          class="button button-red"
+          type="submit"
+        >
+          Buscar
+        </button>
+
       </form>
 
+
+      <!-- ============================
+           FILTROS
+           ============================ -->
+
       <div class="filter-grid">
-        <fieldset class="filter-group"><legend>Gênero</legend><div class="chips"><label class="chip selected"><input type="radio" name="genero" checked />Todos</label><label class="chip"><input type="radio" name="genero" />Ação</label><label class="chip"><input type="radio" name="genero" />Drama</label><label class="chip"><input type="radio" name="genero" />Terror</label><label class="chip"><input type="radio" name="genero" />Comédia</label><label class="chip"><input type="radio" name="genero" />Ficção científica</label><label class="chip"><input type="radio" name="genero" />Documentário</label><label class="chip"><input type="radio" name="genero" />Aventura</label></div></fieldset>
-        <fieldset class="filter-group"><legend>Ano de lançamento</legend><div class="decades"><label><input type="radio" name="ano" />Década de 1920</label><label><input type="radio" name="ano" />Década de 1950</label><label><input type="radio" name="ano" />Década de 1980</label><label><input type="radio" name="ano" />Década de 2000</label><label class="active"><input type="radio" name="ano" checked />2020–2026</label></div><div class="range-row"><span>1920</span><div class="range-line"><i></i></div><span>2026</span></div><div class="year-inputs"><input type="number" value="1920" aria-label="Ano inicial" /><span>—</span><input type="number" value="2026" aria-label="Ano final" /></div></fieldset>
-        <fieldset class="filter-group rating-group"><legend>Avaliação</legend><div class="rating-options"><label><input type="radio" name="avaliacao" />★ 9.0+</label><label class="active"><input type="radio" name="avaliacao" checked />★ 8.0+</label><label><input type="radio" name="avaliacao" />★ 7.0+</label><label><input type="radio" name="avaliacao" />★ 6.0+</label><label><input type="radio" name="avaliacao" />★ Todas</label></div><label class="toggle-line"><input type="checkbox" checked /><span class="toggle"></span><span>Somente com trailer</span></label></fieldset>
+
+
+        <!-- ============================
+             FILTRO DE GÊNERO
+             ============================ -->
+
+        <fieldset class="filter-group">
+
+          <legend>
+            Gênero
+          </legend>
+
+          <div class="chips">
+
+            <label class="chip selected">
+              <input
+                type="radio"
+                name="genero"
+                value="todos"
+                checked
+              />
+              Todos
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="acao"
+              />
+              Ação
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="drama"
+              />
+              Drama
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="terror"
+              />
+              Terror
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="comedia"
+              />
+              Comédia
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="ficcao"
+              />
+              Ficção científica
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="documentario"
+              />
+              Documentário
+            </label>
+
+            <label class="chip">
+              <input
+                type="radio"
+                name="genero"
+                value="aventura"
+              />
+              Aventura
+            </label>
+
+          </div>
+
+        </fieldset>
+
+
+        <!-- ============================
+             FILTRO DE ANO
+             ============================ -->
+
+        <fieldset class="filter-group">
+
+          <legend>
+            Ano de lançamento
+          </legend>
+
+          <div class="decades">
+
+            <label>
+              <input
+                type="radio"
+                name="ano"
+                value="1920"
+              />
+              Década de 1920
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="ano"
+                value="1950"
+              />
+              Década de 1950
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="ano"
+                value="1980"
+              />
+              Década de 1980
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="ano"
+                value="2000"
+              />
+              Década de 2000
+            </label>
+
+            <label class="active">
+              <input
+                type="radio"
+                name="ano"
+                value="2020-2026"
+                checked
+              />
+              2020–2026
+            </label>
+
+          </div>
+
+
+          <div class="range-row">
+
+            <span>
+              1920
+            </span>
+
+            <div class="range-line">
+              <i></i>
+            </div>
+
+            <span>
+              2026
+            </span>
+
+          </div>
+
+
+          <div class="year-inputs">
+
+            <input
+              type="number"
+              name="ano-inicial"
+              value="1920"
+              min="1888"
+              max="2026"
+              aria-label="Ano inicial"
+            />
+
+            <span>
+              —
+            </span>
+
+            <input
+              type="number"
+              name="ano-final"
+              value="2026"
+              min="1888"
+              max="2026"
+              aria-label="Ano final"
+            />
+
+          </div>
+
+        </fieldset>
+
+
+        <!-- ============================
+             FILTRO DE AVALIAÇÃO
+             ============================ -->
+
+        <fieldset class="filter-group rating-group">
+
+          <legend>
+            Avaliação
+          </legend>
+
+          <div class="rating-options">
+
+            <label>
+              <input
+                type="radio"
+                name="avaliacao"
+                value="9"
+              />
+              ★ 9.0+
+            </label>
+
+            <label class="active">
+              <input
+                type="radio"
+                name="avaliacao"
+                value="8"
+                checked
+              />
+              ★ 8.0+
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="avaliacao"
+                value="7"
+              />
+              ★ 7.0+
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="avaliacao"
+                value="6"
+              />
+              ★ 6.0+
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="avaliacao"
+                value="todas"
+              />
+              ★ Todas
+            </label>
+
+          </div>
+
+
+          <!-- ============================
+               FILTRO DE TRAILER
+               ============================ -->
+
+          <label class="toggle-line">
+
+            <input
+              type="checkbox"
+              name="trailer"
+              checked
+            />
+
+            <span
+              class="toggle"
+              aria-hidden="true">
+            </span>
+
+            <span>
+              Somente com trailer
+            </span>
+
+          </label>
+
+        </fieldset>
+
       </div>
 
-      <div class="filter-footer"><a href="#filtros" class="clear-link">Limpar filtros</a><div class="filter-actions"><span>Filtros prontos para aplicar</span><button class="button button-red" type="submit">Aplicar filtros</button></div></div>
+
+      <!-- ============================
+           AÇÕES DOS FILTROS
+           ============================ -->
+
+      <div class="filter-footer">
+
+        <a
+          href="#filtros"
+          class="clear-link"
+        >
+          Limpar filtros
+        </a>
+
+        <div class="filter-actions">
+
+          <span>
+            Filtros prontos para aplicar
+          </span>
+
+          <button
+            class="button button-red"
+            type="submit"
+          >
+            Aplicar filtros
+          </button>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="results" id="resultados" aria-live="polite"><div><p class="eyebrow">CATÁLOGO FILTRADO</p><h2><strong>6</strong> filmes encontrados</h2></div><div class="result-note">Use os filtros acima para refinar sua busca.</div></section>
+
+    <!-- ============================
+         RESULTADOS
+         ============================ -->
+
+    <section
+      class="results"
+      id="resultados"
+      aria-live="polite"
+    >
+
+      <div>
+
+        <p class="eyebrow">
+          CATÁLOGO FILTRADO
+        </p>
+
+        <h2>
+          <strong>6</strong> filmes encontrados
+        </h2>
+
+      </div>
+
+      <div class="result-note">
+        Use os filtros acima para refinar sua busca.
+      </div>
+
+    </section>
+
   </main>
 
-  <footer class="site-footer"><span>Cine<strong>Scope</strong></span><span>Disponibilidade e legendas podem variar.</span><span>Busca e filtros · 2026</span></footer>
+
+  <!-- ============================
+       RODAPÉ
+       ============================ -->
+
+  <footer class="site-footer">
+
+    <span>
+      Cine<strong>Scope</strong>
+    </span>
+
+    <span>
+      Disponibilidade e legendas podem variar.
+    </span>
+
+    <span>
+      Busca e filtros · 2026
+    </span>
+
+  </footer>
+
 </body>
 </html>
