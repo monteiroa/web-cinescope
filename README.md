@@ -118,15 +118,34 @@ Utilizado para desenvolver a aparência da plataforma, incluindo:
 A estrutura inicial do projeto será organizada da seguinte maneira:
 
 ```text
-TELETUBE/
+CineScope/
 │
 ├── README.md
 │
-└── src/
-    │
-    ├── index.html
-    │
-    ├── css/
-    │   └── style.css
-    │
-    └── img/
+├── index.html
+│
+├── pages/
+│   ├── acao.html
+│   ├── drama.html
+│   ├── terror.html
+│   ├── catalogo.html
+│   └── filtro.html
+│
+├── css/
+│   ├── style.css
+│   ├── acao.css
+│   ├── drama.css
+│   ├── terror.css
+│   ├── catalogo.css
+│   └── filtro.css
+│
+└── images/
+    ├── mad-max.webp
+    ├── batman-cavaleiro.webp
+    ├── Top-Gun-Maverickwebp.webp
+    ├── o-poderoso-chefao.jpg
+    ├── forest-gump.jpg
+    ├── CDD.jpg
+    ├── iluminado.jpg
+    ├── hereditário.jpg
+    └── invocação-do-mal.jpg
