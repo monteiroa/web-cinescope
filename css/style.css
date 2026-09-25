@@ -16,12 +16,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 42px;
-
     background: #0d0d0d;
-
-    border-bottom: 1px solid #292929;
+     border-bottom: 1px solid #292929;
 }
 .logo {
     font-size: 23px;
